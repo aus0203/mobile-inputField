@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f9f9;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.a-inputField {
+    position: relative;
+    height: 56px;
+    width: 351px;
+    margin-bottom: 38px;
+    input {
+        position: absolute;
+        height: 56px;
+        width: 351px;
+        top: 0;
+        left: 0;
+        border: 1px solid #d2d2d2;
+        border-radius: 2px;
+        font-size: 16px;
+        line-height: 20px;
+        padding-left: 12px;
+        font-style: normal;
+        font-weight: normal;
+        color: #343434;
+    }
+
+    .a-inputField-label {
+        position: relative;
+        display: inline-block;
+        z-index: 2;
+        top: 18px;
+        left: 12px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: #7d7d7d;
+        transition: 0.3s ease;
+        pointer-events: none;
+    }
+
+    .star{
+        padding-left: 2px;
+        color: red;
+    }
+}
+
+.a-inputField input:focus{
+    outline: none !important;
+    border: 1px solid #368BC2;
+}
+.a-inputField input:focus ~ .a-inputField-label{
+    color: #368BC2;
+}
+.a-inputField input:focus ~ .a-inputField-label, .a-inputField input:valid ~ .a-inputField-label {
+    transform: translateY(-40px);
+    font-size: 12px;
+    line-height: 16px;
+    left: 4px;
+    font-weight: 700;
+}
